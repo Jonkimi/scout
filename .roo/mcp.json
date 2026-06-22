@@ -3,20 +3,35 @@
     "google-search": {
       "isActive": true,
       "command": "npx",
-      "args": ["google-search-mcp"],
-      "alwaysAllow": ["google-search"],
-      "disabled": false
+      "args": [
+        "google-search-mcp"
+      ],
+      "alwaysAllow": [
+        "google-search"
+      ],
+      "disabled": true
     },
     "fetcher": {
       "isActive": true,
       "command": "npx",
-      "args": ["-y", "fetcher-mcp"],
-      "alwaysAllow": ["fetch_url", "fetch_urls"],
+      "args": [
+        "-y",
+        "fetcher-mcp"
+      ],
+      "alwaysAllow": [
+        "fetch_url",
+        "fetch_urls"
+      ],
       "disabled": false
     },
     "playwright": {
       "command": "npx",
-      "args": ["playwright-mcp-bypass"],
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--config=${workspaceFolder}/proxy-mcp.config.json"
+      ],
+      "disabled": false,
       "alwaysAllow": [
         "browser_close",
         "browser_wait",
@@ -42,9 +57,10 @@
         "browser_hover",
         "browser_type",
         "browser_select_option",
-        "browser_take_screenshot"
-      ],
-      "disabled": false
+        "browser_take_screenshot",
+        "browser_handle_dialog",
+        "browser_evaluate"
+      ]
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "browser": {
+    "launchOptions": {
+      "proxy": {
+        "server": "http://127.0.0.1:1080",
+        "bypass": "*.internal.example.com",
+        "username": "",
+        "password": ""
+      },
+      "headless": false,
+      "disable-blink-features": "AutomationControlled"
+    },
+    "contextOptions": {
+      "viewport": { "width": 1280, "height": 720 }
+    }
+  },
+
+  "capabilities": [ "core", "tabs", "pdf", "wait" ]
+}
